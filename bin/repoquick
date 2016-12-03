@@ -1,1 +1,9 @@
 # repoquick
+
+from repoquick.lib import RepoQuick
+from repoquick import dialogue
+from repoquick import start
+
+# call start()
+if __name__ == "__main__":
+    start()
