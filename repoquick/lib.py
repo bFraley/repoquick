@@ -2,7 +2,8 @@
 
 import sys, os
 
-from dialogue import license_names, ignore_names, authors, year
+
+from . dialogue import version_text, help_text,license_names, ignore_names, authors, year
 
 class RepoQuick():
     def __init__(self):
@@ -38,8 +39,8 @@ def start():
     rq.check_posix()
 
     if not len(sys.argv) > 1:
-        print(dialogue.version_text)
-        print(dialogue.help_text)
+        print(version_text)
+        print(help_text)
         exit(0)
     else:
         command_text = sys.argv[1]
