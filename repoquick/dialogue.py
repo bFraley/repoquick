@@ -1,6 +1,7 @@
+commands = ['license', 'ignore']
 
-help_text = 'help message'
-version_text = 'V1.0.0'
+author = 'repoquick default author not set'
+year = '2016'
 
 license_names = {
     'BSD3':'bsd-3-clause.txt',
@@ -10,7 +11,3 @@ license_names = {
 ignore_names = {
     'Python':'Python.gitignore'
 }
-
-authors = []
-
-year = '2016'
