@@ -1,8 +1,8 @@
-# repoquick
+#!/usr/bin/env python
+# https://github.com/bFraley/repoquick
 
-from repoquick.lib import RepoQuick
+from repoquick.lib import RepoQuick, start
 from repoquick import dialogue
-from repoquick import start
 
 # call start()
 if __name__ == "__main__":

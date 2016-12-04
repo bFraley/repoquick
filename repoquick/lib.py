@@ -21,12 +21,12 @@ class RepoQuick():
             exit(1)
 
     def touch_license_file(self, license_filename):
-        command_string = 'cp _licenses/{} ./LICENSE'.format(license_filename)
+        command_string = 'cp ../_licenses/{} ./LICENSE'.format(license_filename)
         self.call(command_string)
 
 
     def touch_ignore_file(self, ignore_filename):
-        command_string = 'cp _ignore/{} ./.gitignore'.format(ignore_filename)
+        command_string = 'cp ../_ignore/{} ./.gitignore'.format(ignore_filename)
         self.call(command_string)
 
 
@@ -42,12 +42,12 @@ def start():
     command_text = sys.argv[1]
     
     if not command_text in commands:
-        error_str ='\nrepoquick:\nUnrecognized command "{}"'.format(command_text)
+        error_str ='\nrepoquick:\nUnrecognized command "{}"\n'.format(command_text)
         print(error_str)
         exit(0)
 
     if not arg_length > 2:
-        error_str = '\nrepoquick:\nCommand: {} requires an option'.format(command_text)
+        error_str = '\nrepoquick:\nCommand: "{}" requires an option\n'.format(command_text)
         print(error_str)
         exit(0)
 
