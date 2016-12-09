@@ -60,8 +60,8 @@ def start():
 
 
     if command_text == 'license':
-        rq.touch_license_file(command_option)
+        rq.new_license_file(command_option)
 
     elif command_text == 'ignore':
-        rq.touch_ignore_file(command_option)  
+        rq.new_ignore_file(command_option)  
     
