@@ -26,12 +26,12 @@ class RepoQuick():
             exit(1)
 
     def new_license_file(self, license_filename):
-        command_string = 'cp {}{} ./LICENSE'.format(self.license_path, license_filename)
+        command_string = 'cp {}/{}/ ./LICENSE'.format(self.license_path, license_filename)
         self.call(command_string)
 
 
     def new_ignore_file(self, ignore_filename):
-        command_string = 'cp {}{} ./.gitignore'.format(self.ignore_path, ignore_filename)
+        command_string = 'cp {}/{}/ ./.gitignore'.format(self.ignore_path, ignore_filename)
         self.call(command_string)
 
 
