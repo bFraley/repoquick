@@ -7,6 +7,11 @@ class RepoQuick():
     def __init__(self):
         self.osname = os.name
 
+    # Set absolute paths to resources files, relative to this module.
+    resource_path = os.path.abspath(os.path.join(os.path.dirname('lib.py'), 'resources/'))
+    license_path = resource_path + 'license_files'
+    ignore_path = resource_path + 'ignore_files'
+
     # Execute shell commands.
     def call(self, shell_string):
         if os.system(shell_string):
@@ -20,13 +25,13 @@ class RepoQuick():
             print('repoquick: posix OS required.\n')
             exit(1)
 
-    def touch_license_file(self, license_filename):
-        command_string = 'cp ../_licenses/{} ./LICENSE'.format(license_filename)
+    def new_license_file(self, license_filename):
+        command_string = 'cp {}{} ./LICENSE'.format(license_path, license_filename)
         self.call(command_string)
 
 
-    def touch_ignore_file(self, ignore_filename):
-        command_string = 'cp ../_ignore/{} ./.gitignore'.format(ignore_filename)
+    def new_ignore_file(self, ignore_filename):
+        command_string = 'cp {}{} ./.gitignore'.format(ignore_path, ignore_filename)
         self.call(command_string)
 
 
